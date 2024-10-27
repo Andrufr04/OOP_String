@@ -1,6 +1,7 @@
 #include "MyString.h"
 #include<Windows.h>
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 int MyString::countLiveObj = 0;
@@ -253,6 +254,22 @@ MyString& MyString::operator+=(const MyString& other)
 	this->str = temp;
 
 	return *this;
+}
+
+void MyString::Save(const char* filename)
+{
+	ofstream file(filename);
+	if (file.is_open())
+	{
+		file << str;
+		file.close();
+		cout << "File saved" << endl;
+	}
+	else
+	{
+		cout << "Failed to save file" << endl;
+	}
+
 }
 
 

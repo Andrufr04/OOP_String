@@ -36,8 +36,15 @@ MyString operator+(const char* str1, const MyString& str2)
 
 int main()
 {
-    MyString str1{ 'a', 's', 's', 'd', 'f' };
-    cout << str1;
+
+    MyString str("HHHHelllllooooo :)");
+    cout << str << endl;
+    str.Save("T1");
+
+
+
+    /*MyString str1{ 'a', 's', 's', 'd', 'f' };
+    cout << str1;*/
 
 
     /*MyString a("World");

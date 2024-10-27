@@ -49,5 +49,7 @@ public:
 
 	MyString& operator+=(const MyString& other);
 
+	void Save(const char* filename);
+
 	~MyString();
 };
